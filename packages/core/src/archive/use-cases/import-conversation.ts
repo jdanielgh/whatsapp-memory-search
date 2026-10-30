@@ -24,6 +24,7 @@ import type {
   NewMessageInput,
 } from "../repositories/conversation-repository.js";
 import type { ImportJobRepository } from "../repositories/import-job-repository.js";
+import { errorSummary } from "../../shared/error-summary.js";
 
 export interface ImportConversationDeps {
   conversationRepo: ConversationRepository;
@@ -184,15 +185,15 @@ export async function persistImportBatch(
     }
     return outcome;
   } catch (err) {
-    const errorSummary = err instanceof Error ? err.message : String(err);
-    await deps.importJobRepo.failImportJob(importJobId, errorSummary);
+    const summary = errorSummary(err);
+    await deps.importJobRepo.failImportJob(importJobId, summary);
     await deps.audit({
       actor,
       operation: "import",
       resourceType: "ImportJob",
       resourceId: importJobId,
       result: "failure",
-      details: { errorSummary },
+      details: { errorSummary: summary },
     });
     throw err;
   }

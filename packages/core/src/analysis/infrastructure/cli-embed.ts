@@ -18,6 +18,7 @@ import { auditedRun } from "../../shared/run-audit.js";
 import { DrizzleConversationRepository } from "../../archive/infrastructure/conversation-repository.drizzle.js";
 import { generateEmbeddingsForConversation } from "../embeddings.js";
 import { DrizzleEmbeddingsRepository } from "./embeddings-repository.drizzle.js";
+import { errorSummary } from "../../shared/error-summary.js";
 
 function numericFlag(name: string): number | undefined {
   const index = process.argv.indexOf(name);
@@ -120,6 +121,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : String(err));
+  console.error(errorSummary(err));
   process.exitCode = 1;
 });

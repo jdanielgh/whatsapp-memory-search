@@ -8,6 +8,7 @@ import { recordAudit } from "../../shared/audit.js";
 import { DrizzleConversationRepository } from "../../archive/infrastructure/conversation-repository.drizzle.js";
 import { extractMetadataForConversation } from "../use-cases/extract-metadata.js";
 import { DrizzleProcessingRepository } from "./processing-repository.drizzle.js";
+import { errorSummary } from "../../shared/error-summary.js";
 
 async function main(): Promise<void> {
   const conversationRepo = new DrizzleConversationRepository();
@@ -33,6 +34,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : String(err));
+  console.error(errorSummary(err));
   process.exitCode = 1;
 });

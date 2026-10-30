@@ -9,6 +9,7 @@
 import type { ProviderInfo } from "../infrastructure/ai/provider.js";
 import type { AuditRecorder } from "./audit.js";
 import type { DomainProfile } from "./domain-profile.js";
+import { errorSummary as summarizeError } from "./error-summary.js";
 
 export interface RunAuditInput {
   ai?: ProviderInfo;
@@ -87,6 +88,8 @@ export async function auditedRun<T>(
   return result;
 }
 
+// Causa más interna, no el envoltorio de drizzle con el SQL y sus parámetros
+// (shared/error-summary.ts), recortada para la auditoría.
 function errorSummary(error: unknown): string {
-  return (error instanceof Error ? error.message : String(error)).slice(0, 300);
+  return summarizeError(error).slice(0, 300);
 }

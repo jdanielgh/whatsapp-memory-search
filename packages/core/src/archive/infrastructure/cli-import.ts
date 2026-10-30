@@ -32,6 +32,7 @@ import { importConversation } from "../use-cases/import-conversation.js";
 import { syncNewMessages } from "../use-cases/sync-new-messages.js";
 import { DrizzleConversationRepository } from "./conversation-repository.drizzle.js";
 import { DrizzleImportJobRepository } from "./import-job-repository.drizzle.js";
+import { errorSummary } from "../../shared/error-summary.js";
 
 // getOrCreateConversation/getOrCreateParticipant/filterNewContentHashes
 // son check-then-act (docs/ERROR_HANDLING.md no cubre corridas
@@ -187,6 +188,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : String(err));
+  console.error(errorSummary(err));
   process.exitCode = 1;
 });

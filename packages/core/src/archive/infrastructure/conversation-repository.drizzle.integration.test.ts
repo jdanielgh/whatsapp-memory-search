@@ -114,8 +114,12 @@ describe("DrizzleConversationRepository (integration)", () => {
       },
     ]);
 
+    // drizzle-orm >= 0.44 envuelve el error de pg en DrizzleQueryError;
+    // el "permission denied" del driver queda en `cause`.
     await expect(
       testDb.execute(sql`DELETE FROM messages WHERE content_hash = 'hash-inmutable'`)
-    ).rejects.toThrow(/permission denied/i);
+    ).rejects.toMatchObject({
+      cause: { message: expect.stringMatching(/permission denied/i) },
+    });
   });
 });

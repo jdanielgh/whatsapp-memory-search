@@ -40,6 +40,7 @@ import {
 } from "../src/assistant/use-cases/answer-question.js";
 import { REPO_ROOT } from "../src/shared/repo-paths.js";
 import { QUESTIONS as DEFAULT_QUESTIONS, type BankQuestion } from "./regression-questions-bank.js";
+import { errorSummary } from "../src/shared/error-summary.js";
 
 function flagValue(name: string): string | undefined {
   const index = process.argv.indexOf(name);
@@ -301,7 +302,7 @@ async function main(): Promise<void> {
         // que el costo del reintento no quede invisible.
         usage: perQuestionUsage.summary(),
         elapsedMs: Date.now() - startedAt,
-        error: err instanceof Error ? err.message : String(err),
+        error: errorSummary(err),
       };
     }
 
@@ -333,6 +334,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : String(err));
+  console.error(errorSummary(err));
   process.exitCode = 1;
 });

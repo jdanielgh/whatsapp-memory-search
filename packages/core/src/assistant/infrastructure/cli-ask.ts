@@ -25,6 +25,7 @@ import { UsageAccumulator } from "../../shared/ai-cost.js";
 import { getActiveDomainProfile } from "../../shared/domain-profile-loader.js";
 import { DrizzleConversationRepository } from "../../archive/infrastructure/conversation-repository.drizzle.js";
 import { answerQuestion, type AnswerQuestionDeps } from "../use-cases/answer-question.js";
+import { errorSummary } from "../../shared/error-summary.js";
 
 async function main(): Promise<void> {
   const question = process.argv.slice(2).filter((a) => !a.startsWith("--")).join(" ").trim();
@@ -110,6 +111,6 @@ ${usage.report()}`);
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : String(err));
+  console.error(errorSummary(err));
   process.exitCode = 1;
 });
