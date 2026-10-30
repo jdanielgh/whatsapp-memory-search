@@ -116,8 +116,10 @@ export function resolveClaudeCommand(
     );
   }
 
-  const exe = path.join(
-    path.dirname(located),
+  // path.win32 explícito: esta rama solo aplica a Windows, y con `path` a
+  // secas el test (que simula win32) fallaba al correr en Linux/CI.
+  const exe = path.win32.join(
+    path.win32.dirname(located),
     "node_modules",
     "@anthropic-ai",
     "claude-code",
