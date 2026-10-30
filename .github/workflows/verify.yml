@@ -1,0 +1,61 @@
+# rules/dev-style.md, regla 5: `npm run verify` (typecheck + unit +
+# integration) tiene que correr en verde antes de mergear a main. Este
+# workflow lo automatiza en cada push/PR en vez de depender de que
+# alguien se acuerde de correrlo a mano.
+#
+# El servicio de Postgres usa credenciales fijas acá a propósito: son
+# efímeras, existen solo dentro de este contenedor del workflow y se
+# descartan al terminar el job — no son secretos reales
+# (rules/security-privacy.md regla 3 aplica a claves/tokens de verdad,
+# no a esto). La base de datos de integration tests además es siempre
+# una variante `_test` derivada en runtime (packages/core/src/infrastructure/db/test-db.ts),
+# nunca una con evidencia real.
+
+name: verify
+
+on:
+  push:
+    # `develop` es la rama de integración donde se acumulan las features
+    # antes de llegar a main. Sin ella acá, un merge a develop no
+    # verificaba nada: los checks del PR corren sobre la rama de la
+    # feature, no sobre el resultado de integrarla.
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: cma_admin
+          POSTGRES_PASSWORD: ci_only_ephemeral_admin_password
+          POSTGRES_DB: conversation_memory_assistant
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U cma_admin -d conversation_memory_assistant"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      MIGRATIONS_DATABASE_URL: postgres://cma_admin:ci_only_ephemeral_admin_password@localhost:5432/conversation_memory_assistant
+      DATABASE_URL: postgres://cma_app:ci_only_ephemeral_app_password@localhost:5432/conversation_memory_assistant
+      APP_DB_PASSWORD: ci_only_ephemeral_app_password
+      POSTGRES_ADMIN_PASSWORD: ci_only_ephemeral_admin_password
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Verify (typecheck + unit tests + integration/E2E tests)
+        run: npm run verify

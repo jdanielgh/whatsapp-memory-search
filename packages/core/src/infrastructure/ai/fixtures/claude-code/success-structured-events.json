@@ -1,0 +1,323 @@
+{
+  "duration_api_ms": 8240,
+  "stop_reason": "tool_use",
+  "session_id": "00000000-0000-0000-0000-000000000000",
+  "total_cost_usd": 0.03176,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4194,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1498,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 4194,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1498,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 4194,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4194
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-sonnet-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 1498,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 4194,
+      "webSearchRequests": 0,
+      "costUSD": 0.03176,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 0,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 4194,
+      "canonicalModel": "claude-sonnet-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 2,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"events\":[{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Reunión revisión de presupuesto jueves\",\"message_indices\":[1],\"observation\":\"El Participante 1 propone reunirse el jueves para revisar el presupuesto.\",\"confidence\":0.95,\"analyses\":[{\"dimension\":\"cooperación\",\"score\":0.7}]},{\"type\":\"rechazo\",\"category\":\"trabajo\",\"title\":\"Reunión revisión de presupuesto jueves\",\"message_indices\":[1,2],\"observation\":\"El Participante 2 rechaza el jueves porque tiene una cita médica.\",\"confidence\":0.95},{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Reunión presupuesto viernes 10 h\",\"message_indices\":[3],\"observation\":\"El Participante 1 propone reunirse el viernes a las 10.\",\"confidence\":0.95},{\"type\":\"aceptación\",\"category\":\"trabajo\",\"title\":\"Reunión presupuesto viernes 10 h\",\"message_indices\":[3,4],\"observation\":\"El Participante 2 acepta el viernes a las 10.\",\"confidence\":0.95},{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Elección de sala de reunión\",\"message_indices\":[5,6,7],\"observation\":\"Tras avisar que la sala del tercer piso está ocupada, el Participante 1 propone usar la del segundo.\",\"confidence\":0.8},{\"type\":\"aceptación\",\"category\":\"trabajo\",\"title\":\"Elección de sala de reunión\",\"message_indices\":[7,8],\"observation\":\"El Participante 2 acepta usar la sala del segundo piso.\",\"confidence\":0.92},{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Envío del borrador del presupuesto\",\"message_indices\":[9],\"observation\":\"El Participante 1 ofrece pasar el borrador esa noche.\",\"confidence\":0.7},{\"type\":\"aceptación\",\"category\":\"trabajo\",\"title\":\"Envío del borrador del presupuesto\",\"message_indices\":[9,10],\"observation\":\"El Participante 2 agradece y dice que lo revisará al día siguiente.\",\"confidence\":0.7},{\"type\":\"cambio_horario\",\"category\":\"trabajo\",\"title\":\"Cambio de hora a las 11\",\"message_indices\":[11],\"observation\":\"El Participante 1 propone mover la reunión del viernes de las 10 a las 11.\",\"confidence\":0.9},{\"type\":\"rechazo\",\"category\":\"trabajo\",\"title\":\"Cambio de hora a las 11\",\"message_indices\":[11,12],\"observation\":\"El Participante 2 rechaza las 11 por tener otra llamada.\",\"confidence\":0.95},{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Nueva hora reunión a las 12\",\"message_indices\":[13],\"observation\":\"El Participante 1 propone las 12 como alternativa.\",\"confidence\":0.92},{\"type\":\"aceptación\",\"category\":\"trabajo\",\"title\":\"Nueva hora reunión a las 12\",\"message_indices\":[13,14],\"observation\":\"El Participante 2 acepta las 12.\",\"confidence\":0.95},{\"type\":\"acuerdo\",\"category\":\"trabajo\",\"title\":\"Reunión confirmada viernes 12:00\",\"message_indices\":[15],\"observation\":\"El Participante 1 confirma la reunión del viernes a las 12:00 en la sala del segundo piso.\",\"confidence\":0.9},{\"type\":\"cancelación\",\"category\":\"trabajo\",\"title\":\"Cancelación de la reunión del jueves\",\"message_indices\":[16,17],\"observation\":\"El Participante 2 cancela lo del jueves y el Participante 1 lo reconoce con un ok.\",\"confidence\":0.8},{\"type\":\"propuesta\",\"category\":\"trabajo\",\"title\":\"Responsable de llevar el proyector\",\"message_indices\":[18],\"observation\":\"El Participante 2 pregunta quién llevará el proyector.\",\"confidence\":0.5},{\"type\":\"acuerdo\",\"category\":\"trabajo\",\"title\":\"Responsable de llevar el proyector\",\"message_indices\":[18,19,20],\"observation\":\"El Participante 1 se ofrece a llevar el proyector y el Participante 2 lo acepta.\",\"confidence\":0.85,\"analyses\":[{\"dimension\":\"cooperación\",\"score\":0.9},{\"dimension\":\"cordialidad\",\"score\":0.8}]}]}",
+  "structured_output": {
+    "events": [
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Reunión revisión de presupuesto jueves",
+        "message_indices": [
+          1
+        ],
+        "observation": "El Participante 1 propone reunirse el jueves para revisar el presupuesto.",
+        "confidence": 0.95,
+        "analyses": [
+          {
+            "dimension": "cooperación",
+            "score": 0.7
+          }
+        ]
+      },
+      {
+        "type": "rechazo",
+        "category": "trabajo",
+        "title": "Reunión revisión de presupuesto jueves",
+        "message_indices": [
+          1,
+          2
+        ],
+        "observation": "El Participante 2 rechaza el jueves porque tiene una cita médica.",
+        "confidence": 0.95
+      },
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Reunión presupuesto viernes 10 h",
+        "message_indices": [
+          3
+        ],
+        "observation": "El Participante 1 propone reunirse el viernes a las 10.",
+        "confidence": 0.95
+      },
+      {
+        "type": "aceptación",
+        "category": "trabajo",
+        "title": "Reunión presupuesto viernes 10 h",
+        "message_indices": [
+          3,
+          4
+        ],
+        "observation": "El Participante 2 acepta el viernes a las 10.",
+        "confidence": 0.95
+      },
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Elección de sala de reunión",
+        "message_indices": [
+          5,
+          6,
+          7
+        ],
+        "observation": "Tras avisar que la sala del tercer piso está ocupada, el Participante 1 propone usar la del segundo.",
+        "confidence": 0.8
+      },
+      {
+        "type": "aceptación",
+        "category": "trabajo",
+        "title": "Elección de sala de reunión",
+        "message_indices": [
+          7,
+          8
+        ],
+        "observation": "El Participante 2 acepta usar la sala del segundo piso.",
+        "confidence": 0.92
+      },
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Envío del borrador del presupuesto",
+        "message_indices": [
+          9
+        ],
+        "observation": "El Participante 1 ofrece pasar el borrador esa noche.",
+        "confidence": 0.7
+      },
+      {
+        "type": "aceptación",
+        "category": "trabajo",
+        "title": "Envío del borrador del presupuesto",
+        "message_indices": [
+          9,
+          10
+        ],
+        "observation": "El Participante 2 agradece y dice que lo revisará al día siguiente.",
+        "confidence": 0.7
+      },
+      {
+        "type": "cambio_horario",
+        "category": "trabajo",
+        "title": "Cambio de hora a las 11",
+        "message_indices": [
+          11
+        ],
+        "observation": "El Participante 1 propone mover la reunión del viernes de las 10 a las 11.",
+        "confidence": 0.9
+      },
+      {
+        "type": "rechazo",
+        "category": "trabajo",
+        "title": "Cambio de hora a las 11",
+        "message_indices": [
+          11,
+          12
+        ],
+        "observation": "El Participante 2 rechaza las 11 por tener otra llamada.",
+        "confidence": 0.95
+      },
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Nueva hora reunión a las 12",
+        "message_indices": [
+          13
+        ],
+        "observation": "El Participante 1 propone las 12 como alternativa.",
+        "confidence": 0.92
+      },
+      {
+        "type": "aceptación",
+        "category": "trabajo",
+        "title": "Nueva hora reunión a las 12",
+        "message_indices": [
+          13,
+          14
+        ],
+        "observation": "El Participante 2 acepta las 12.",
+        "confidence": 0.95
+      },
+      {
+        "type": "acuerdo",
+        "category": "trabajo",
+        "title": "Reunión confirmada viernes 12:00",
+        "message_indices": [
+          15
+        ],
+        "observation": "El Participante 1 confirma la reunión del viernes a las 12:00 en la sala del segundo piso.",
+        "confidence": 0.9
+      },
+      {
+        "type": "cancelación",
+        "category": "trabajo",
+        "title": "Cancelación de la reunión del jueves",
+        "message_indices": [
+          16,
+          17
+        ],
+        "observation": "El Participante 2 cancela lo del jueves y el Participante 1 lo reconoce con un ok.",
+        "confidence": 0.8
+      },
+      {
+        "type": "propuesta",
+        "category": "trabajo",
+        "title": "Responsable de llevar el proyector",
+        "message_indices": [
+          18
+        ],
+        "observation": "El Participante 2 pregunta quién llevará el proyector.",
+        "confidence": 0.5
+      },
+      {
+        "type": "acuerdo",
+        "category": "trabajo",
+        "title": "Responsable de llevar el proyector",
+        "message_indices": [
+          18,
+          19,
+          20
+        ],
+        "observation": "El Participante 1 se ofrece a llevar el proyector y el Participante 2 lo acepta.",
+        "confidence": 0.85,
+        "analyses": [
+          {
+            "dimension": "cooperación",
+            "score": 0.9
+          },
+          {
+            "dimension": "cordialidad",
+            "score": 0.8
+          }
+        ]
+      }
+    ]
+  },
+  "ttft_ms": 8669,
+  "type": "result",
+  "duration_ms": 8714,
+  "uuid": "00000000-0000-0000-0000-000000000000",
+  "ttft_stream_ms": 1352,
+  "time_to_request_ms": 467,
+  "time_to_request_phases_ms": {
+    "other": 21,
+    "system_prompt": 1,
+    "resume_other": 1,
+    "process_user_input": 4,
+    "input_attachments": 25,
+    "input_hooks": 3,
+    "tool_pool_refresh": 2,
+    "init_message": 29,
+    "engine_pickup": 1,
+    "message_prep": 1,
+    "model_config_wait": 357,
+    "autocompact": 2,
+    "query_setup": 1,
+    "model_gates": 0,
+    "tool_schema_build": 4,
+    "message_normalization": 4,
+    "client_creation": 5,
+    "request_build": 6
+  },
+  "turn_start_resume_kind": "none",
+  "process_turn_index": 0,
+  "time_to_request_loop_lag_ms": 37,
+  "time_to_request_cpu_ms": 719,
+  "time_to_request_major_faults": 10322,
+  "input_attachments_detail": {
+    "slowest_producer": "session_settings",
+    "slowest_producer_ms": 18,
+    "cpu_ms": 62,
+    "major_faults": 153
+  },
+  "first_content_frame_ms": 1352,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

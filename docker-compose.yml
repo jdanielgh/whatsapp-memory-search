@@ -1,0 +1,24 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      # cma_admin es el rol dueño de las tablas (migraciones/DDL). El rol
+      # restringido de runtime (cma_app, sin UPDATE/DELETE sobre
+      # evidencia) lo crea src/infrastructure/db/migrate.ts, no Postgres
+      # al arrancar — ver ese script y rules/security-privacy.md regla 5.
+      POSTGRES_USER: cma_admin
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-changeme_local_dev_only}
+      POSTGRES_DB: conversation_memory_assistant
+    ports:
+      - "5432:5432"
+    volumes:
+      - cma_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cma_admin -d conversation_memory_assistant"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  cma_pgdata:

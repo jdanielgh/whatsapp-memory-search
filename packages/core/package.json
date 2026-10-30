@@ -1,0 +1,44 @@
+{
+  "name": "@cma/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dominio, pipelines y CLIs de Conversation Memory Assistant (archivo, procesamiento, búsqueda y agente).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "verify": "npm run typecheck && npm test && npm run test:integration",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/infrastructure/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "sync": "tsx src/archive/infrastructure/cli-import.ts",
+    "process:metadata": "tsx src/processing/infrastructure/cli-extract-metadata.ts",
+    "process:entities": "tsx src/processing/infrastructure/cli-detect-entities.ts",
+    "process:events": "tsx src/knowledge/infrastructure/cli-detect-events.ts",
+    "process:embeddings": "tsx src/analysis/infrastructure/cli-embed.ts",
+    "ask": "tsx src/assistant/infrastructure/cli-ask.ts",
+    "smoke:ai": "tsx scripts/smoke-ai.ts",
+    "smoke:embeddings": "tsx scripts/smoke-embeddings.ts",
+    "regression:questions": "tsx scripts/regression-100-questions.ts",
+    "regression:compare": "tsx scripts/compare-regression.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

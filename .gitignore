@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Estado local del hook de SessionStart (se regenera, no es evidencia)
+.claude/state/
+
+# Backups locales (backup-manager) - nunca al repo
+*.dump
+*.sql.gz
+backups/
+
+# Permisos locales de Claude Code: son por máquina y se acumulan solos
+# en cada sesión. `settings.json` sí se versiona; este no.
+.claude/settings.local.json
+
+# Perfiles de dominio locales (plans/):
+# describen un uso concreto de la app y no se versionan. Solo
+# profiles/example.json va al repo.
+profiles/local/

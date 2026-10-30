@@ -1,0 +1,14 @@
+{
+  "id": "club-deportivo",
+  "version": 1,
+  "conversationContext": "un grupo de WhatsApp de un club deportivo",
+  "caseCategories": ["entrenamientos", "torneos", "cuotas", "logistica", "otro"],
+  "catchAllCategory": "otro",
+  "analysisDimensions": ["cordialidad", "urgencia", "cooperación"],
+  "caseContinuityDays": 30,
+  "catchAllContinuityDays": 7,
+  "intentExamples": [
+    { "question": "¿qué se dijo sobre el torneo?", "text": "torneo" },
+    { "question": "¿hablamos de la cuota?", "text": "cuota" }
+  ]
+}
