@@ -2,7 +2,7 @@
 
 [Español](../UBIQUITOUS_LANGUAGE.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

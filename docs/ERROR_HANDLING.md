@@ -1,6 +1,6 @@
 # ERROR_HANDLING.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Propósito
 

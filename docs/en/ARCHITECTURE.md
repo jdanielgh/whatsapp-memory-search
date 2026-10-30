@@ -2,7 +2,7 @@
 
 [Español](../ARCHITECTURE.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## System architecture
 

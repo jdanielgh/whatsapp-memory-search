@@ -2,7 +2,7 @@
 
 [Español](../VISUAL_GUIDE.md) · **English**
 
-# Conversation Memory Assistant — visual guide
+# WhatsApp Memory Search — visual guide
 
 ## Purpose
 

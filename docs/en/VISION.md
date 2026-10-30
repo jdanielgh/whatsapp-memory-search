@@ -1,10 +1,10 @@
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 [Español](../VISION.md) · **English**
 
 ## Vision
 
-Conversation Memory Assistant is a conversational memory system designed to
+WhatsApp Memory Search is a conversational memory system designed to
 preserve, organize and analyze a specific WhatsApp conversation.
 
 The system's main goal is not to act as a chatbot, but to become a
@@ -103,7 +103,7 @@ In later versions the system may:
 
 ## Philosophy
 
-Conversation Memory Assistant does not aim to replace the user's memory.
+WhatsApp Memory Search does not aim to replace the user's memory.
 
 It aims to organize it, preserve it and make it queryable through artificial
 intelligence.

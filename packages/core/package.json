@@ -2,7 +2,7 @@
   "name": "@cma/core",
   "version": "0.1.0",
   "private": true,
-  "description": "Dominio, pipelines y CLIs de Conversation Memory Assistant (archivo, procesamiento, búsqueda y agente).",
+  "description": "Dominio, pipelines y CLIs de WhatsApp Memory Search (archivo, procesamiento, búsqueda y agente).",
   "type": "module",
   "engines": {
     "node": ">=20"

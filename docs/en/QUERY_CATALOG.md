@@ -2,7 +2,7 @@
 
 [Español](../QUERY_CATALOG.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

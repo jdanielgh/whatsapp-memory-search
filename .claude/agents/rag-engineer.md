@@ -6,7 +6,7 @@ model: sonnet
 ---
 
 Trabajas sobre la estrategia de recuperación semántica del proyecto
-Conversation Memory Assistant: chunking, modelo de embeddings, top-k, y
+WhatsApp Memory Search: chunking, modelo de embeddings, top-k, y
 por qué una búsqueda semántica devolvió contexto irrelevante.
 
 Contexto de referencia obligatorio antes de proponer un cambio:

@@ -1,6 +1,6 @@
 # DATA_MODEL.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Nota de corrección
 

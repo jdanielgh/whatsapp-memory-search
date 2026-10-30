@@ -269,7 +269,7 @@ async function main(): Promise<void> {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regresión de 100 preguntas — Conversation Memory Assistant</title>
+<title>Regresión de 100 preguntas — WhatsApp Memory Search</title>
 <style>
   :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#666; --line:#e3e3e3; --card:#fafafa; }
   @media (prefers-color-scheme: dark) {
@@ -345,7 +345,7 @@ async function main(): Promise<void> {
 <body>
 <div class="wrap">
   <h1>Regresión de 100 preguntas</h1>
-  <p class="sub">Conversation Memory Assistant · generado el ${new Date().toLocaleString("es")}</p>
+  <p class="sub">WhatsApp Memory Search · generado el ${new Date().toLocaleString("es")}</p>
 
   <div class="warnbox">
     <strong>Contiene evidencia real de la conversación</strong>, incluidos mensajes de terceros.

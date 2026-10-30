@@ -1,6 +1,6 @@
 # SYSTEM_INVARIANTS.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Propósito
 

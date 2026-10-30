@@ -1,8 +1,8 @@
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Visión
 
-Conversation Memory Assistant es un sistema de memoria conversacional diseñado para preservar, organizar y analizar una conversación específica de WhatsApp.
+WhatsApp Memory Search es un sistema de memoria conversacional diseñado para preservar, organizar y analizar una conversación específica de WhatsApp.
 
 El objetivo principal del sistema no es actuar como un chatbot, sino convertirse en una memoria permanente e inteligente de la conversación.
 
@@ -92,6 +92,6 @@ En versiones posteriores el sistema podrá:
 
 ## Filosofía
 
-Conversation Memory Assistant no pretende reemplazar la memoria del usuario.
+WhatsApp Memory Search no pretende reemplazar la memoria del usuario.
 
 Pretende organizarla, preservarla y hacerla consultable mediante inteligencia artificial.

@@ -10,7 +10,7 @@ PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." &
 STATUS_FILE="$PROJECT_DIR/.claude/state/status.json"
 
 if [ ! -f "$STATUS_FILE" ]; then
-  echo "Conversation Memory Assistant — sin estado registrado todavía."
+  echo "WhatsApp Memory Search — sin estado registrado todavía."
   echo "No se ha corrido ninguna importación ni backup en este entorno,"
   echo "o .claude/state/status.json aún no existe."
   echo "Ver skill whatsapp-ingest para importar, o backup-manager para restaurar."
@@ -23,7 +23,7 @@ if command -v node >/dev/null 2>&1; then
     const path = process.argv[1];
     try {
       const s = JSON.parse(fs.readFileSync(path, "utf8"));
-      console.log("Conversation Memory Assistant — estado:");
+      console.log("WhatsApp Memory Search — estado:");
       console.log("  Última importación: " + (s.last_import_at ?? "nunca"));
       console.log("  Mensajes: " + (s.message_count ?? "?"));
       console.log("  Cases abiertos: " + (s.open_cases_count ?? "?"));

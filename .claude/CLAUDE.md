@@ -1,4 +1,4 @@
-# Proyecto: Conversation Memory Assistant
+# Proyecto: WhatsApp Memory Search
 
 Agente personal que archiva, indexa (RAG) y eventualmente responde una
 conversación de WhatsApp. Stack: Node.js/TypeScript + PostgreSQL + pgvector.

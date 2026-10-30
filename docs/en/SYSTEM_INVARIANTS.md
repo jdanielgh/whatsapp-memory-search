@@ -2,7 +2,7 @@
 
 [Español](../SYSTEM_INVARIANTS.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

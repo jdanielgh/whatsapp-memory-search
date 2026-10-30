@@ -2,7 +2,7 @@
 
 [Español](../USE_CASES.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

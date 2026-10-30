@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob
 model: haiku
 ---
 
-Ejecutas operaciones rutinarias del proyecto Conversation Memory Assistant:
+Ejecutas operaciones rutinarias del proyecto WhatsApp Memory Search:
 correr el importador (`whatsapp-ingest`), verificar backups
 (`backup-manager`), y comprobar integridad de datos
 (`architecture-review`, sección checklist).

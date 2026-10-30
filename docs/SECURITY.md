@@ -1,6 +1,6 @@
 # SECURITY.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Propósito
 

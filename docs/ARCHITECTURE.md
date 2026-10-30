@@ -1,6 +1,6 @@
 # ARCHITECTURE.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Arquitectura del sistema
 

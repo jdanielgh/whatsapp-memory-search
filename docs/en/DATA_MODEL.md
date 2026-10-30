@@ -2,7 +2,7 @@
 
 [Español](../DATA_MODEL.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

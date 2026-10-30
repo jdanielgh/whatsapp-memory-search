@@ -2,7 +2,7 @@
 
 [Español](../AGGREGATES.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

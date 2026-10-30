@@ -1,6 +1,6 @@
 # VISUAL_GUIDE.md
 
-# Conversation Memory Assistant — guía visual
+# WhatsApp Memory Search — guía visual
 
 ## Propósito
 

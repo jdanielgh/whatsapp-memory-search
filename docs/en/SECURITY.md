@@ -2,7 +2,7 @@
 
 [Español](../SECURITY.md) · **English**
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # UBIQUITOUS_LANGUAGE.md
 
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 ## Propósito
 
