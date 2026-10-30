@@ -1,4 +1,4 @@
-# Conversation Memory Assistant
+# WhatsApp Memory Search
 
 [Español](README.md) · **English**
 
